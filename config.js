@@ -15,9 +15,13 @@ config = {
         url: 'http://34.204.5.140',
         mail: {},
         database: {
-            client: 'sqlite3',
+            client: 'mysql',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
+                host     : 'wolfy-client-db.cvbwccyu2bj0.us-east-1.rds.amazonaws.com',
+                user     : 'ghost',
+                password: "AdE3onOlepsDnfA0e",
+                database : 'blog_website',
+                charset  : 'utf8'
             },
             debug: false
         },
