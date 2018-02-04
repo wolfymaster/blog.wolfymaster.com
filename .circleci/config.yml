@@ -53,6 +53,9 @@ jobs:
     working_directory: ~/repo
     steps:
       - run:
+          name: Install rsync
+          command: apt-get install -y rsync
+      - run:
           name: Deploy to server
           command: |
             if [ "${CIRCLE_BRANCH}" == "staging" ]; then
