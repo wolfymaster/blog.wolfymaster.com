@@ -58,7 +58,7 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "staging" ]; then
                 echo "Staging not setup"
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-                pwd && ls
+                rsync --dry-run -az --force --delete --progress -e "ssh -p22" ./ bitnami@wolfymaster.design:~/apps/blog
             else
                 echo "What are you doing?"
             fi
