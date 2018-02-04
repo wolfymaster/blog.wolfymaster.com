@@ -54,7 +54,7 @@ jobs:
     steps:
       - run:
           name: Install rsync
-          command: apt-get install -y rsync
+          command: sudo apt-get install -y rsync
       - run:
           name: Deploy to server
           command: |
