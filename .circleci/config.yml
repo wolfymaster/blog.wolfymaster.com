@@ -38,6 +38,12 @@ jobs:
       # install project dependencies
       - run: npm install
 
+      # persist workspace so that it is accessible to downstream jobs
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./
+
       - save_cache:
           paths:
             - node_modules
@@ -65,6 +71,8 @@ jobs:
             else
                 echo "What are you doing?"
             fi
+      - attach_workspace:
+          at: ./
 
 workflows:
   version: 2
