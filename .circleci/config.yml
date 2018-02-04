@@ -61,7 +61,7 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "staging" ]; then
                 echo "Staging not setup"
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-                rsync --dry-run -az --force --delete --progress --exclude="node_modules" -e "ssh -p22 -o StrictHostKeyChecking=no" ./ bitnami@wolfymaster.design:~/apps/blog
+                rsync --dry-run -az --force --delete --progress --exclude="node_modules" -e "ssh -p22 -o StrictHostKeyChecking=no" ~/repo bitnami@wolfymaster.design:~/apps/blog
             else
                 echo "What are you doing?"
             fi
