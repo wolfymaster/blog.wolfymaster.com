@@ -85,3 +85,6 @@ jspm_packages
 
 # Ghost Dev DB
 ghost-dev.db
+
+# Old Ghost Install
+ghost-old
