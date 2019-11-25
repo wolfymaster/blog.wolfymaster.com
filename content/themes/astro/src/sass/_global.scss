@@ -213,11 +213,16 @@ input:not([type=submit]):not([type=file]):focus {
     float: right;
 }
 
+header.title {
+    height:80px;
+    background: #ed6a5a
+}
+
 .notification {
     margin-top: 50px;
     padding: 20px 25px;
     border-radius: 4px;
-    background: #1c78be;
+    background: #08415c;
 
     .ntitle {
         font: 700 18px 'Open Sans', Serif;
@@ -241,7 +246,7 @@ input:not([type=submit]):not([type=file]):focus {
         transition: opacity 0.2s;
         color: #fff;
         border-radius: 30px;
-        background: #0b4673;
+        background: #ed6a5a;
 
         i {
             margin-top: 3px;
@@ -261,12 +266,16 @@ footer {
     text-align: center;
     color: #a6a6a6;
 
+    &.page-footer {
+        background: #08415c;
+    }
+
     span {
         display: block;
     }
 
     a {
-        color: #5498dc;
+        color: #ed6a5a;
     }
 
     .smallnav {

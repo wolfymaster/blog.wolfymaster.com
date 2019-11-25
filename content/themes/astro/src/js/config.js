@@ -1,7 +1,7 @@
 var config = {
     // Disqus Shortname (http://disqus.com)
     // Options: Shortname / Blank ('') (Disabled)
-    'disqus_shortname': 'ecko',
+    'disqus_shortname': '',
     // Google Comments (http://google.com)
     // Options: true / false
     'google_comments': true,
@@ -19,5 +19,5 @@ var config = {
     'autoload_comments': false,
     // Enable 'Theme By EckoThemes' Copyright Disclaimer
     // Options: true / false
-    'show_ecko_disclaimer': true,
+    'show_ecko_disclaimer': false,
 };
