@@ -71,7 +71,15 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "staging" ]; then
                 echo "Staging not setup"
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-                ls ~/repo/ && pwd && rsync -az --force --delete --progress --exclude="node_modules" -e "ssh -p22 -o StrictHostKeyChecking=no" ~/repo/ bitnami@wolfymaster.design:~/apps/blog
+                ssh -t -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << EOF
+                git clone --depth=1 git@github.com:wolfymaster/blog.wolfymaster.com.git tmp
+                (cd tmp/current/ && npm install)
+                sudo find ./tmp ! -path "./versions/*" -type f -exec chmod 664 {} \;
+                rsync --exclude '.git' -vr tmp/ $DEPLOY_DIR
+                rm -rf tmp
+                cd $DEPLOY_DIR
+                ghost restart
+                EOF
             else
                 echo "What are you doing?"
             fi
