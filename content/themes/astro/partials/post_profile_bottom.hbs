@@ -6,11 +6,11 @@
 }}
 
     <div class="postprofile">
-        {{#if author.profile_image}}<img src="{{author.profile_image}}" class="author" alt="{{author.name}}">{{/if}}
+        {{#if primary_author.profile_image}}<img src="{{primary_author.profile_image}}" class="author" alt="{{primary_author.name}}">{{/if}}
         <div class="info">
-            <h4>{{author.name}}</h4>
-            <a href="{{author.website}}">{{author.website}}</a>
-            <p>{{author.bio}}</p>
+            <h4>{{primary_author.name}}</h4>
+            <a href="{{primary_author.website}}">{{primary_author.website}}</a>
+            <p>{{primary_author.bio}}</p>
             {{> social_bottom }}
         </div>
     </div>

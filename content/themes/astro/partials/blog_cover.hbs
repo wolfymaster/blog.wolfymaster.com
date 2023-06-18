@@ -5,12 +5,12 @@
 
 }}
 
-    {{#if @blog.cover_image}}
+    {{#if @site.cover_image}}
         <div id="cover" class="cover post indexfeature featured">
-            <div class="background" style="background-image: url('{{@blog.cover_image}}');"></div>
+            <div class="background" style="background-image: url('{{@site.cover_image}}');"></div>
             <header class="wrapper">
-                {{#if @blog.logo}}<img src="{{@blog.logo}}" class="profileimage" alt="{{@blog.title}}">{{/if}}
-                <p>{{@blog.description}}</p>
+                {{#if @site.logo}}<img src="{{@site.logo}}" class="profileimage" alt="{{@site.title}}">{{/if}}
+                <p>{{@site.description}}</p>
             </header>
             <i class="fa fa-chevron-down movedown"></i>
         </div>

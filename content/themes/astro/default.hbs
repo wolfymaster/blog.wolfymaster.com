@@ -11,9 +11,9 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="alternate" type="application/rss+xml" href="{{@blog.url}}/rss/">
+    <link rel="alternate" type="application/rss+xml" href="{{@site.url}}/rss/">
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-    <link rel="prefetch" href="{{@blog.url}}">
+    <link rel="prefetch" href="{{@site.url}}">
 
     <link rel="stylesheet" type="text/css" href="{{asset "css/theme.min.css"}}" />
     <link href="https://fonts.googleapis.com/css?family=Domine:700%7COpen+Sans:400,600%7CSource+Code+Pro:500" rel="stylesheet" type="text/css">
@@ -21,7 +21,7 @@
 
     {{ghost_head}}
 </head>
-<body class="{{body_class}} {{#if @blog.cover_image}}blogcover{{/if}}">
+<body class="{{body_class}} {{#if @site.cover_image}}blogcover{{/if}}">
 
     {{> blog_title}}
 

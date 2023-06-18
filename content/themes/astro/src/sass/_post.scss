@@ -456,3 +456,9 @@ body.page-template {
 body.post-template #scrollbubble {
     font: 600 12px 'Open Sans', serif;
 }
+
+.kg-width-full img,
+.kg-width-wide img{
+    // required by gcsan to properly validate the theme
+    display:block;
+}

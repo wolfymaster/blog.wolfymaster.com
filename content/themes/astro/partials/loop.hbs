@@ -16,7 +16,7 @@
                 </h2>
                 <h1><a href="{{url}}">{{{title}}}</a></h1>
                 <span>
-                    Posted {{#author}}<span class="postauthor">by<a href="{{url}}"> {{#if profile_image}}<img class="smallprofile" src="{{profile_image}}" alt="{{name}}">{{/if}}{{name}}</a></span>{{/author}} on <i class="fa fa-clock-o"></i><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM Do, YYYY"}}</time>.
+                    Posted {{#primary_author}}<span class="postauthor">by<a href="{{url}}"> {{#if profile_image}}<img class="smallprofile" src="{{profile_image}}" alt="{{name}}">{{/if}}{{name}}</a></span>{{/primary_author}} on <i class="fa fa-clock-o"></i><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM Do, YYYY"}}</time>.
                 </span>
                 <p>{{excerpt characters="260"}}&hellip;</p>
             </header>
