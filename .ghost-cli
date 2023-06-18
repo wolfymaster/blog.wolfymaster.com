@@ -1,5 +1,7 @@
 {
-  "active-version": "2.25.4",
-  "cli-version": "1.11.0",
-  "name": "localhost"
+  "active-version": "4.48.9",
+  "cli-version": "1.24.0",
+  "name": "localhost",
+  "previous-version": "3.42.9",
+  "node-version": "16.15.0"
 }
